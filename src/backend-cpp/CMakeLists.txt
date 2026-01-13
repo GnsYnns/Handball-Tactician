@@ -43,7 +43,7 @@ add_custom_command(
 
 # --- 3. Déclaration de l'exécutable ---
 add_executable(handball_engine
-        main.cpp
+        main_debug.cpp
         ${GENERATED_DIR}/tactician.pb.cc
         ${GENERATED_DIR}/tactician.grpc.pb.cc
         src/io/VideoSource.cpp
@@ -59,6 +59,7 @@ add_executable(handball_engine
         src/vision/Geometry.hpp
         src/pipeline/PipelineManager.cpp
         src/pipeline/PipelineManager.hpp
+        main_debug.cpp
 )
 
 # --- 4. Includes et Linking ---
