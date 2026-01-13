@@ -1,0 +1,21 @@
+# C++ / CMake / CLion
+cmake-build-*/
+.idea/
+bin/
+build/
+*.o
+*.so
+*.dylib
+
+# Node / Web
+node_modules/
+.next/
+.env
+*.log
+
+# Generated Protobuf files (on les regénère, on ne les versionne pas forcément, mais pour l'instant on peut les ignorer ou non selon la stratégie. Ici on ignore pour rester propre)
+# src/backend-cpp/generated/
+# src/frontend-web/src/generated/
+
+# OS
+.DS_Store
