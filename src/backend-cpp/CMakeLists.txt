@@ -46,6 +46,19 @@ add_executable(handball_engine
         main.cpp
         ${GENERATED_DIR}/tactician.pb.cc
         ${GENERATED_DIR}/tactician.grpc.pb.cc
+        src/io/VideoSource.cpp
+        src/io/VideoSource.hpp
+        src/pipeline/SafeQueue.cpp
+        src/pipeline/SafeQueue.hpp
+        src/vision/YoloDetector.cpp
+        src/vision/YoloDetector.hpp
+        src/core/DomainTypes.hpp
+        src/vision/TeamClassifier.cpp
+        src/vision/TeamClassifier.hpp
+        src/vision/Geometry.cpp
+        src/vision/Geometry.hpp
+        src/pipeline/PipelineManager.cpp
+        src/pipeline/PipelineManager.hpp
 )
 
 # --- 4. Includes et Linking ---

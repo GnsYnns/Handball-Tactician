@@ -20,9 +20,17 @@ message FrameData {
 
 message Player {
   int32 id = 1;
-  float x = 2; // Coordonnées normalisées (0.0 à 1.0)
+  float x = 2;
   float y = 3;
-  string team = 4; // "A" ou "B"
+
+  // Définition de l'Enum à l'intérieur ou à l'extérieur du message
+  enum TeamColor {
+    UNKNOWN = 0; // Toujours avoir une valeur par défaut (0)
+    TEAM_A = 1;  // Ex: Blancs
+    TEAM_B = 2;  // Ex: Bleus
+  }
+
+  TeamColor team = 4; // C'est envoyé comme un petit entier (1 octet), ultra rapide.
 }
 
 message Ball {
