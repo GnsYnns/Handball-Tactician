@@ -1,12 +1,3 @@
-C'est la touche finale qui fait la différence. Un README de qualité "Ingénieur Senior" ne se contente pas de dire "comment installer". Il vend l'architecture, les choix techniques et la rigueur.
-
-Voici le fichier `README.md` optimisé pour GitHub (avec support des badges et diagrammes Mermaid) et le message de commit parfait.
-
-### 1. Le Fichier : `README.md`
-
-Crée ce fichier à la racine du projet (`/Handball-Tactician/README.md`).
-
-```markdown
 # Handball Tactician
 
 ![C++](https://img.shields.io/badge/C++-20-blue.svg?style=flat&logo=c%2B%2B)
@@ -121,5 +112,3 @@ This project is structured as a Monorepo to ensure contract consistency.
 ## 👤 Author
 
 Developed as a showcase of Systems Engineering & Full-Stack Robotics capabilities.
-
-```
