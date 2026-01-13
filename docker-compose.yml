@@ -1,0 +1,10 @@
+services:
+  envoy:
+    image: envoyproxy/envoy:v1.25-latest
+    volumes:
+      - ./infrastructure/envoy/envoy.yaml:/etc/envoy/envoy.yaml
+    ports:
+      - "8080:8080" # Port exposé au Web
+      - "9901:9901" # Admin interface
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Permet au Docker de voir ton serveur C++ local

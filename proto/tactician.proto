@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package tactician;
+
+// Service défini : Le C++ stream, le Web écoute.
+service StreamPositions {
+  // Le serveur envoie un flux continu de FrameData
+  rpc Subscribe (SessionRequest) returns (stream FrameData);
+}
+
+message SessionRequest {
+  string client_id = 1;
+}
+
+message FrameData {
+  int64 timestamp = 1;
+  repeated Player players = 2; // Liste des joueurs détectés
+  Ball ball = 3;
+}
+
+message Player {
+  int32 id = 1;
+  float x = 2; // Coordonnées normalisées (0.0 à 1.0)
+  float y = 3;
+  string team = 4; // "A" ou "B"
+}
+
+message Ball {
+  float x = 1;
+  float y = 2;
+  float speed = 3;
+}
